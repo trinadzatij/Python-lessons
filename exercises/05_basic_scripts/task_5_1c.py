@@ -48,3 +48,9 @@ london_co = {
         'routing': True
     }
 }
+device = input('input device name: ')
+parlist = ''
+for keys in london_co[device]:
+    parlist += (keys + ', ')
+parameter = input('input parameter name (' + parlist + '): ')
+print(parameter + ' of ' + device + ' is ' + str(london_co[device].get(parameter, ' There\'s no such parameter')))
